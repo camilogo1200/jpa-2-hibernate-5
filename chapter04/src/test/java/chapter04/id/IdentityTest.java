@@ -44,7 +44,7 @@ public class IdentityTest {
         Transaction tx = session.beginTransaction();
 
         NongeneratedIdentity obj = new NongeneratedIdentity();
-        obj.setId(1l);
+        obj.setId(1L);
         session.persist(obj);
 
         tx.commit();

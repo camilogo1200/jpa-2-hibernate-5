@@ -18,7 +18,9 @@
         <!--        <property name="hbm2ddl.auto">create</property>-->
         <!--  Database connection settings  -->
         <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
-        <property name="connection.url">jdbc:sqlserver://localhost:1433;databaseName=services;trustServerCertificate=true;</property>
+        <property name="connection.url">
+            jdbc:sqlserver://localhost:1433;databaseName=services;trustServerCertificate=true;
+        </property>
         <property name="hibernate.default_schema">dbo</property>
         <property name="connection.username">sa</property>
         <property name="connection.password">Liam_1200</property>
@@ -29,22 +31,23 @@
         <property name="show_sql">true</property>
         <!--  Drop and re-create the database schema on startup  -->
         <property name="hbm2ddl.auto">create</property>
+<!--      create, create-drop, update, validate, drop, create-only, none  -->
 
-        <mapping class="chapter04.broken.Email"/>
-        <mapping class="chapter04.broken.Message"/>
+        <mapping class="inventory.ProductCategoryData"/>
+        <mapping class="inventory.User"/>
 
-        <mapping class="chapter04.mapped.Email"/>
-        <mapping class="chapter04.mapped.Message"/>
+        <!--        <mapping class="chapter04.mapped.Email"/>-->
+        <!--        <mapping class="chapter04.mapped.Message"/>-->
 
-        <mapping class="chapter04.id.GeneratedAutoIdentity"/>
-        <mapping class="chapter04.id.GeneratedIdentityIdentity"/>
-        <mapping class="chapter04.id.GeneratedTableIdentity"/>
-        <mapping class="chapter04.id.GeneratedSequenceIdentity"/>
-        <mapping class="chapter04.id.NongeneratedIdentity"/>
+        <!--        <mapping class="chapter04.id.GeneratedAutoIdentity"/>-->
+        <!--        <mapping class="chapter04.id.GeneratedIdentityIdentity"/>-->
+        <!--        <mapping class="chapter04.id.GeneratedTableIdentity"/>-->
+        <!--        <mapping class="chapter04.id.GeneratedSequenceIdentity"/>-->
+        <!--        <mapping class="chapter04.id.NongeneratedIdentity"/>-->
 
-        <mapping class="chapter04.model.SimpleObject"/>
+        <!--        <mapping class="chapter04.model.SimpleObject"/>-->
 
-        <mapping class="chapter04.orphan.Library"/>
-        <mapping class="chapter04.orphan.Book"/>
+        <!--        <mapping class="chapter04.orphan.Library"/>-->
+        <!--        <mapping class="chapter04.orphan.Book"/>-->
     </session-factory>
 </hibernate-configuration>
